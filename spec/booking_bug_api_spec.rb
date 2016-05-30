@@ -5,7 +5,17 @@ describe BookingBugApi do
     expect(BookingBugApi::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  describe '::get_services' do
+    let(:services) { BookingBugApi.get_services }
+
+    it 'should be an Array' do
+      expect(services).to be_a Array
+    end
+
+    it 'size should be 6' do
+      expect(services.size).to be 6
+    end
+
   end
+
 end
