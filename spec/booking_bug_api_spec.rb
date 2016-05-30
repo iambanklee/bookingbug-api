@@ -18,4 +18,14 @@ describe BookingBugApi do
 
   end
 
+  describe '::print_q4' do
+    subject { BookingBugApi.print_q4(number) }
+
+    context 'should be 2 services' do
+      let(:number) { 2 }
+      it { expect(subject.size).to be 2 }
+    end
+
+  end
+
 end
